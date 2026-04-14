@@ -112,3 +112,53 @@ Voici les résultats synthétisés ci-dessous :
     \end{tabular}
     \caption{Distance focale de la lentille $L_1$ et son incertitude par la méthode d'autocollimation.}
 \end{table}
+
+\subsection{Méthode de Silbermann}
+
+\subsubsection{Mesures brutes}
+Lors de cette manipulation, 
+nous avons déplacé conjointement la lentille et l'écran 
+afin d'obtenir une image de même taille que l'objet, mais renversée. 
+Les positions relevées sur le banc optique millimétré sont les suivantes :
+$p = -20{,}0 \text{ cm}$
+$p' = 20{,}0 \text{ cm}$
+
+Ces mesures sont en parfait accord avec la théorie. 
+En effet, d'après la relation de position de l'image démontrée dans la partie théorique, 
+la condition $D=4f'$ implique que $|p| = |p'| = 2f'$. 
+Ici, nous observons bien que l'objet et l'image 
+sont situés à la même distance du centre optique de la lentille ($20{,}0 \text{ cm}$), 
+ce qui correspond à un grandissement transversal $\gamma = \frac{p'}{p} = -1$.
+
+\subsubsection{Calcul d'incertitude}
+L'incertitude sur la distance focale $\Delta f'_1$ est calculée 
+à partir de l'incertitude sur la distance objet-écran $D = p' - p$.
+Pour un banc millimétré, l'incertitude de lecture est de $0{,}1 \text{ cm}$ par position.
+$\Delta D = \Delta p' + \Delta p = 0{,}1 + 0{,}1 = 0{,}2 \text{ cm}$.
+
+En appliquant la méthode des différentielles à la relation de Silbermann $f' = \frac{D}{4}$, 
+nous obtenons l'expression suivante :
+$\Delta f'_1 = \frac{\Delta D}{4} = \frac{0{,}2}{4} = 0{,}05 \text{ cm}$.
+
+\subsubsection{Calcul de la distance focale image}
+La distance focale est déterminée en utilisant la relation spécifique 
+à la méthode de Silbermann établie dans la partie théorique :
+$f'_1 = \frac{D}{4}$
+$f'_1 = \frac{p' - p}{4} = \frac{20{,}0 - (-20{,}0)}{4} = \frac{40{,}0}{4}$
+$f'_1 = 10{,}0 \text{ cm}$.
+
+\subsubsection{Tableau récapitulatif}
+Conformément au format de synthèse du fascicule, 
+voici les résultats obtenus pour la lentille $L_1$ :
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        $p \text{ (cm)}$ & $p' \text{ (cm)}$ & $f'_1 \text{ (cm)}$ & $\Delta f'_1 \text{ (cm)}$ \\
+        \hline
+        $-20{,}0$ & $20{,}0$ & $10{,}0$ & $0{,}05$ \\
+        \hline
+    \end{tabular}
+    \caption{Résultats expérimentaux de la méthode de Silbermann.}
+\end{table}
