@@ -74,3 +74,82 @@ Ce qui se simplifie en :
 \begin{equation}
     D = \frac{-p^{2}}{p + f'}
 \end{equation}
+
+\subsubsection{Conditions d'existence des images nettes}
+
+Partons de l'expression établie précédemment :
+\begin{equation}
+    D = \frac{-p^{2}}{p + f'}
+\end{equation}
+
+En réarrangeant les termes, 
+nous obtenons une équation du second degré en $p$ :
+\begin{equation}
+    p^{2} + Dp + Df' = 0
+\end{equation}
+
+Pour déterminer les positions $p$ de la lentille permettant d'obtenir une image nette sur l'écran, 
+calculons le discriminant $\Delta$ de cette équation :
+\begin{equation}
+    \Delta = D^{2} - 4Df' = D(D - 4f')
+\end{equation}
+
+Supposons que nous souhaitions obtenir des images réelles. 
+Le discriminant doit être positif ou nul, ce qui impose la condition :
+\begin{equation}
+    D \ge 4f'
+\end{equation}
+
+Montrons que si cette condition est strictement vérifiée ($D > 4f'$), 
+il existe alors deux positions distinctes $p_{1}$ et $p_{2}$ pour la lentille, 
+données par :
+\begin{equation}
+    p_{1,2} = \frac{-D \pm \sqrt{D(D - 4f')}}{2}
+\end{equation}
+
+Ces deux racines correspondent aux deux positions de la lentille, 
+notées $O_{1}$ et $O_{2}$ dans le fascicule, 
+pour lesquelles l'objet et l'écran sont conjugués.
+
+\subsubsection{Relation de Bessel}
+
+\paragraph{Note sur la symétrie des racines d'une équation du second degré}
+\textit{Dans une équation du second degré type $f(x) = ax^2 + bx + c$, 
+avec $a, b, c \in \mathbb{R}$, 
+la somme des solutions de l'équation $f(x) = 0$ 
+est toujours égale à $-\frac{b}{a}$.
+Ce point correspond également au maximum global d'une fonction carrée, 
+les solutions étant exactement symétrique de ce point.}
+
+Soit $d$ la distance séparant les deux positions de la lentille 
+permettant d'obtenir une image nette sur l'écran. 
+Par symétrie des racines de l'équation du second degré, 
+nous pouvons définir $d$ comme la différence entre $p_{2}$ et $p_{1}$ :
+
+\begin{equation}
+    d = |p_{2} - p_{1}| = \sqrt{\Delta} = \sqrt{D(D - 4f')}
+\end{equation}
+
+Élevons cette expression au carré pour supprimer la racine :
+
+\begin{equation}
+    d^{2} = D(D - 4f')
+\end{equation}
+
+Isolons maintenant le terme contenant la distance focale $f'$ 
+en développant l'expression :
+
+\begin{equation}
+    d^{2} = D^{2} - 4Df'
+\end{equation}
+
+D'où l'on tire la relation de Bessel 
+permettant de déterminer la distance focale :
+
+\begin{equation}
+    f' = \frac{D^{2} - d^{2}}{4D}
+\end{equation}
+
+Cette expression montre que la connaissance de la distance objet-écran $D$ 
+et de l'écart $d$ entre les deux positions de la lentille 
+suffit à déterminer $f'$.
