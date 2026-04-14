@@ -162,3 +162,64 @@ voici les résultats obtenus pour la lentille $L_1$ :
     \end{tabular}
     \caption{Résultats expérimentaux de la méthode de Silbermann.}
 \end{table}
+
+
+\subsection{Détermination de la distance focale par la méthode de Bessel}
+
+\subsubsection{Mesures et exploitation}
+
+Pour une distance objet-écran fixée à $D = 50,0 \text{ cm}$, les deux positions de mise au point ont été relevées.
+Les données expérimentales sont consignées dans le tableau suivant :
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+ & $p$ (cm) & $p'$ (cm) & $\gamma = \frac{p'}{p}$ & $\overline{AB}$ (cm) & $\overline{A'B'}$ (cm) & $\gamma = \frac{\overline{A'B'}}{\overline{AB}}$ \\ \hline
+Position 1 & -13,8 & +36,2 & -2,62 & +1,0 & -3,0 & -3,00 \\ \hline
+Position 2 & -36,2 & +13,8 & -0,38 & +1,0 & -0,4 & -0,40 \\ \hline
+\end{tabular}
+\caption{Mesures expérimentales pour la méthode de Bessel ($D = 50,0 \text{ cm}$)}
+\end{table}
+
+La distance $d$ séparant les deux positions de la lentille est calculée par $d = |p_2| - |p_1|$ :
+\begin{equation}
+    d = 36,2 - 13,8 = 22,4 \text{ cm}
+\end{equation}
+
+D'après la relation de Bessel établie en partie théorique :
+\begin{equation}
+    f'_1 = \frac{D^2 - d^2}{4D} = \frac{50,0^2 - 22,4^2}{4 \times 50,0} = 9,99 \text{ cm}
+\end{equation}
+
+\subsubsection{Calcul d'incertitude}
+
+L'incertitude sur la distance focale est obtenue par la méthode de la différentielle totale.
+En considérant une incertitude de lecture et de latitude de mise au point de $\Delta D = \Delta d = 0,2 \text{ cm}$ :
+
+\begin{equation}
+    \Delta f'_1 = \frac{1}{4} \left( 1 + \frac{d^2}{D^2} \right) \Delta D + \frac{d}{2D} \Delta d
+\end{equation}
+
+L'application numérique donne :
+\begin{equation}
+    \Delta f'_1 = \frac{1}{4} \left( 1 + \frac{22,4^2}{50,0^2} \right) \times 0,2 + \frac{22,4}{2 \times 50,0} \times 0,2 \approx 0,1 \text{ cm}
+\end{equation}
+
+\subsubsection{Synthèse des résultats}
+
+Le résultat final pour la lentille $L_1$ par la méthode de Bessel est :
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$f_{1}'$ (cm) & $\Delta f_{1}'$ (cm) & $d$ (cm) & $D$ (cm) \\ \hline
+9,99 & 0,1 & 22,4 & 50,0 \\ \hline
+\end{tabular}
+\caption{Synthèse des résultats pour la méthode de Bessel}
+\end{table}
+
+On remarque que le produit des grandissements $\gamma_1 \times \gamma_2 \approx (-2,62) \times (-0,38) = 0,996$.
+Cette valeur est très proche de l'unité attendue théoriquement.
+Cela confirme la cohérence de nos mesures expérimentales.
+
