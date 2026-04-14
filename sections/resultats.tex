@@ -1,0 +1,116 @@
+\subsection{Manipulation 1 : Réglage du collimateur (image à l'infini)}
+
+\subsubsection{Calcul de l'incertitude par méthode différentielle}
+
+Pour évaluer la précision sur la mesure de $f'_1$,
+nous utilisons la méthode des différentielles.
+En partant de la relation de conjugaison de Descartes :
+\begin{equation}
+    \frac{1}{f'_1} = \frac{1}{p'} - \frac{1}{p}
+\end{equation}
+
+\paragraph{Expression de la différentielle}
+En différenciant chaque terme de l'égalité, on obtient :
+\begin{equation}
+    d\left(\frac{1}{f'_1}\right) = d\left(\frac{1}{p'}\right) - d\left(\frac{1}{p}\right)
+\end{equation}
+\begin{equation}
+    -\frac{df'_1}{{f'_1}^2} = -\frac{dp'}{{p'}^2} + \frac{dp}{p^2}
+\end{equation}
+
+Pour obtenir l'incertitude absolue $\Delta f'_1$,
+on passe aux valeurs absolues afin de majorer l'erreur
+(somme des erreurs maximales possibles) :
+\begin{equation}
+    \frac{\Delta f'_1}{{f'_1}^2} = \frac{\Delta p'}{{p'}^2} + \frac{\Delta p}{p^2}
+\end{equation}
+
+\paragraph{Formule finale}
+On en déduit l'expression de l'incertitude absolue sur la focale :
+\begin{equation}
+    \Delta f'_1 = {f'_1}^2 \left( \frac{\Delta p'}{{p'}^2} + \frac{\Delta p}{p^2} \right)
+\end{equation}
+
+\subsubsection{Calcul de la valeur de la focale}
+
+D'après les mesures relevées sur le banc optique :
+\begin{itemize}
+    \item Position de l'objet : $x_{obj} = 15,0$ cm
+    \item Position de la lentille : $x_{L1} = 25,0$ cm
+    \item Distance objet-lentille : $p = -10,0$ cm
+    \item Distance lentille-écran : $p' = +175,0$ cm
+\end{itemize}
+
+La valeur expérimentale est calculée par :
+\begin{equation}
+    f'_1 = \left( \frac{1}{175} + \frac{1}{10} \right)^{-1} \approx 9,46 \text{ cm}
+\end{equation}
+
+L'application numérique de l'incertitude,
+avec $\Delta p \approx \Delta p' \approx 0,2$ cm, donne :
+\begin{equation}
+    \Delta f'_1 = 10^2 \left( \frac{0,2}{175^2} + \frac{0,2}{10^2} \right) \approx 0,2 \text{ cm}
+\end{equation}
+
+\subsubsection{Résultats}
+
+Voici le tableau des mesures et résultats pour la collimation :
+
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $f'_1$ (cm) & $\Delta f'_1$ (cm) \\
+    \hline
+    $9,5$ & $0,2$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+\subsection{Expérience : Autocollimation}
+
+\subsubsection{Mesures brutes}
+Le système catadioptrique, composé de la lentille convergente $L_1$ et d'un miroir plan accolé, 
+a été déplacé sur le banc optique jusqu'à obtenir une image nette de l'objet dans son propre plan. 
+Les positions relevées sur le banc optique sont les suivantes : 
+\begin{itemize}
+    \item Position de l'objet : $x_{obj} = 15,0 \pm 0,1$ cm 
+    \item Position de la lentille : $x_{L} = 25,2 \pm 0,1$ cm 
+\end{itemize}
+La distance focale expérimentale est déduite par la relation $f'_{1} = |x_{L} - x_{obj}|$, 
+ce qui donne $f'_{1} = 10,2$ cm. 
+
+\subsubsection{Calcul d'incertitude}
+La détermination de l'incertitude sur la distance focale $f'_{1}$ repose sur la méthode des différentielles appliquée à la relation de conjugaison de l'autocollimation. 
+On considère la relation fonctionnelle : 
+\[ f'_{1} = x_{L} - x_{obj} \] 
+La différentielle totale de cette expression s'écrit : 
+\[ df'_{1} = \frac{\partial f'_{1}}{\partial x_{L}}dx_{L} + \frac{\partial f'_{1}}{\partial x_{obj}}dx_{obj} = 1 \cdot dx_{L} - 1 \cdot dx_{obj} \] 
+En passant aux incertitudes absolues, on somme les contributions des erreurs liées à chaque pointé : 
+\[ \Delta f'_{1} = |1| \Delta x_{L} + |-1| \Delta x_{obj} = \Delta x_{L} + \Delta x_{obj} \] 
+Les sources d'erreurs identifiées pour chaque position sont : 
+\begin{itemize}
+    \item L'erreur de lecture sur le banc optique : $\Delta x_{lect} = 0,1$ cm.
+    \item La latitude de mise au point sur la position de la lentille : $\Delta x_{map} = 0,2$ cm. 
+\end{itemize}
+Ainsi, nous avons : 
+\begin{itemize}
+    \item $\Delta x_{L} = \Delta x_{lect} + \Delta x_{map} = 0,1 + 0,2 = 0,3$ cm. 
+    \item $\Delta x_{obj} = \Delta x_{lect} = 0,1$ cm. 
+\end{itemize}
+L'incertitude absolue totale est donc : 
+\[ \Delta f'_{1} = 0,3 + 0,1 = 0,4 \text{ cm.} \]
+
+\subsubsection{Tableau des résultats}
+Voici les résultats synthétisés ci-dessous : 
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $f'_{1}$ (cm) & $\Delta f'_{1}$ (cm) \\
+        \hline
+        10,2 & 0,4 \\
+        \hline
+    \end{tabular}
+    \caption{Distance focale de la lentille $L_1$ et son incertitude par la méthode d'autocollimation.}
+\end{table}
