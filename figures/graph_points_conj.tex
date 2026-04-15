@@ -17,7 +17,7 @@
         legend style={nodes={scale=0.8, transform shape}}
     ]
 
-    % --- Extrapolation théorique ---
+    % --- 1. Régression linéaire ---
     \addplot[
         domain=-10:1,
         samples=2,
@@ -25,15 +25,16 @@
         red,
         dashed,
     ] {x + 10};
-    \addlegendentry{Extrapolation ($V \approx 10$ \unit{\per\meter})}
+    \addlegendentry{Régression linéaire : $y = x + 10$}
 
-    % --- Points mesurés (Objet Réel) avec barres d'erreur ---
+    % --- 2. Points mesurés AVEC barres d'erreur intégrées ---
     \addplot[
         only marks,
         mark=*,
         black,
         error bars/.cd,
-        y dir=both, y fixed=0.05,
+        y dir=both, 
+        y fixed=0.05,
         error mark options={rotate=90, mark size=2pt, line width=0.5pt}
     ]
     coordinates {
@@ -43,11 +44,11 @@
     };
     \addlegendentry{Mesures (Objet Réel)}
 
-    % --- Marquage de l'ordonnée à l'origine ---
-    \draw[blue, thick] (axis cs:-0.5,10) -- (axis cs:0.5,10) node[right] {\small $1/f'$};
+    % --- 3. Marquage de l'ordonnée à l'origine ---
+    \draw[blue, thick] (axis cs:-0.5,10) -- (axis cs:0.5,10) node[right, xshift=2pt] {\small $V = \frac{1}{f'}$};
 
     \end{axis}
     \end{tikzpicture}
-    \caption{Détermination de la vergence par exploitation de la relation de conjugaison.}
-    \label{fig:graphe_focometrie}
+    \caption{Analyse de la relation de conjugaison et détermination de la vergence.Les barres d'incertitudes étant trop faibles, elles n'apparaissent pas.}
+    \label{fig:graphe_final}
 \end{figure}
