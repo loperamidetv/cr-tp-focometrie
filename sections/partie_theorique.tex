@@ -218,52 +218,38 @@ de part et d'autre du centre optique :
 
 \subsection{Méthode de Badal (Lentille divergente)}
 
-La détermination de la distance focale d'une lentille divergente 
-nécessite un montage particulier, 
-car celle-ci ne peut pas former d'image réelle 
-à partir d'un objet réel. 
-La méthode de Badal utilise une lentille auxiliaire convergente ($L_{1}$) 
-pour créer un objet virtuel pour la lentille divergente ($L$).
-
-\subsubsection{Principe du montage}
-
-Supposons un montage où une lentille convergente $L_{1}$ 
-forme l'image d'un objet $A$ en un point $A'_{1}$. 
-On place la lentille divergente $L$ entre $L_{1}$ et $A'_{1}$. 
-Le point $A'_{1}$ devient alors un objet virtuel pour $L$. 
-Soit $A'$ l'image finale formée par $L$ sur l'écran.
-
-Dans le dispositif de Badal, 
-on place la lentille divergente $L$ de telle sorte 
-que son centre optique $O$ soit confondu 
-avec le foyer objet $F_{1}'$ de la lentille auxiliaire, 
-ou plus simplement, on utilise les foyers de $L$ comme origine.
-
 \subsubsection{Démonstration par la relation de Newton}
 
-Montrons que le déplacement de l'image est lié 
-linéairement à la focale de la lentille divergente. 
-Appliquons la relation de conjugaison de Newton à la lentille $L$ :
+La méthode de Badal repose sur l'utilisation d'une lentille de visée convergente $L_2$ (de focale $f'_{L2}$) pour déterminer la focale d'une lentille divergente $L'$. 
+
+\paragraph{Dispositif expérimental :}
+Le montage est réalisé de telle sorte que le centre optique $O'$ de la lentille divergente coïncide avec le foyer objet $F_2$ de la lentille de visée. L'objet pour $L'$ est envoyé à l'infini par une lentille auxiliaire $L_1$.
+
+\paragraph{Démonstration :}
+Appliquons la relation de Newton à la lentille de visée $L_2$. Soit $A$ l'objet pour $L_2$ (qui correspond à l'image intermédiaire formée par $L'$) et $A'$ l'image finale observée sur l'écran. La relation de Newton s'écrit :
 \begin{equation}
-    \overline{FA} \cdot \overline{F'A'} = -f'^{2}
+    \overline{F_2 A} \cdot \overline{F'_2 A'} = f_2 \cdot f'_2 = -(f'_{L2})^2
 \end{equation}
 
-Dans cette méthode, on s'arrange pour que l'objet pour $L$ 
-(qui est l'image $A'_{1}$ de la première lentille) 
-soit envoyé au foyer objet $F$ de la lentille divergente. 
+Analysons les termes de cette relation :
+\begin{itemize}
+    \item \textbf{Position de l'objet ($\overline{F_2 A}$)} : Puisque $L'$ est placée en $F_2$, on a $\overline{F_2 A} = \overline{O' A}$. De plus, l'objet étant à l'infini pour $L'$, son image $A$ se forme dans son plan focal image, d'où $A = F'_{L'}$. On en déduit :
+    \begin{equation}
+        \overline{F_2 A} = \overline{O' F'_{L'}} = f'_{L'}
+    \end{equation}
+    
+    \item \textbf{Position de l'image ($\overline{F'_2 A'}$)} : Sans la lentille divergente, l'image d'un objet à l'infini se forme au foyer image $F'_2$ (position $d_1$). Avec la lentille $L'$, l'image se déplace en $d_2$. Le déplacement de l'écran par rapport au foyer image de $L_2$ est donc :
+    \begin{equation}
+        \overline{F'_2 A'} = d_2 - d_1
+    \end{equation}
+\end{itemize}
 
-Cependant, la forme plus courante de la relation de Badal 
-utilisée en TP (selon votre fascicule) 
-repose sur la mesure du déplacement de l'écran. 
-Si l'on note $O$ le centre de la lentille divergente 
-et que l'on utilise la relation de Descartes :
+En substituant ces expressions dans la relation de Newton (1), nous obtenons :
 \begin{equation}
-    \frac{1}{\overline{OA'}} - \frac{1}{\overline{OA}} = \frac{1}{f'}
+    f'_{L'} \cdot (d_2 - d_1) = -(f'_{L2})^2
 \end{equation}
 
-L'astuce de Badal est de faire en sorte que 
-la position de l'image intermédiaire $A'_{1}$ 
-coïncide avec le foyer objet de la lentille de visée, 
-permettant ainsi de simplifier la relation. 
-On mesure l'écart $d = \overline{O_{2}A'}$ 
-entre deux positions de l'écran.
+D'où l'expression finale de la distance focale de la lentille divergente :
+\begin{equation}
+    f'_{L'} = -\frac{(f'_{L2})^2}{d_2 - d_1}
+\end{equation}
