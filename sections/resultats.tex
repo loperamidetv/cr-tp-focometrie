@@ -268,3 +268,39 @@ Cela confirme la cohérence de nos mesures expérimentales.
 \label{tab:E4_final}
 \end{table}
 
+\subsection{Méthode de Badal}
+
+\subsubsection{Mesures brutes}
+Au cours de l'expérience, nous avons relevé les mesures suivantes :
+\begin{itemize}
+    \item distance $d_1 = 20.0$ cm
+    \item distance $d_2 = 60.0$ cm
+\end{itemize}
+
+\subsubsection{Calcul de la focale :}
+En utilisant la relation démontrée précédemment :
+\begin{equation}
+    f'_{L'} = -\frac{(f'_{L2})^2}{d_2 - d_1} = -\frac{20,0^2}{60,0 - 20,0} = -10,0 \text{ cm}
+\end{equation}
+
+\subsubsection{Calcul d'incertitude :}
+L'incertitude absolue $\Delta f'_{L'}$ est obtenue par la méthode de la différentielle totale. En considérant la focale de $L_2$ comme exacte, nous avons :
+\begin{equation}
+    \Delta f'_{L'} = |f'_{L'}| \cdot \frac{\Delta d_1 + \Delta d_2}{d_2 - d_1} = 10,0 \cdot \frac{0,2}{40,0} = 0,05 \text{ cm}
+\end{equation}
+
+\subsubsection{Tableau de synthèse :}
+Le tableau suivant récapitule l'ensemble des grandeurs mesurées et calculées pour cette manipulation.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $f'_{L2}$ (cm) & $d_1$ (cm) & $d_2$ (cm) & $f'_{L'}$ (cm) & $\Delta f'_{L'}$ (cm) \\
+        \hline
+        20,0 & 20,0 & 60,0 & -10,0 & 0,05 \\
+        \hline
+    \end{tabular}
+    \caption{Détermination de la distance focale de la lentille divergente $L'$ par la méthode de Badal.}
+\end{table}
+
